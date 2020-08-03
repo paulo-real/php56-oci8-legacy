@@ -15,8 +15,8 @@ RUN printf "log_errors = On \nerror_log = /dev/stderr\n" > /usr/local/etc/php/co
 
 RUN a2enmod rewrite headers
 
-ADD ./oracle/instantclient-basiclite-linux.x64-19.6.0.0.0dbru.zip /tmp/instantclient-basiclite-linux.x64-19.6.0.0.0dbru.zip
-ADD ./oracle/instantclient-sdk-linux.x64-19.6.0.0.0dbru.zip /tmp/instantclient-sdk-linux.x64-19.6.0.0.0dbru.zip
+ADD https://download.oracle.com/otn_software/linux/instantclient/19600/instantclient-basiclite-linux.x64-19.6.0.0.0dbru.zip /tmp/instantclient-basiclite-linux.x64-19.6.0.0.0dbru.zip
+ADD https://download.oracle.com/otn_software/linux/instantclient/19600/instantclient-sdk-linux.x64-19.6.0.0.0dbru.zip /tmp/instantclient-sdk-linux.x64-19.6.0.0.0dbru.zip
 
 RUN unzip /tmp/instantclient-basiclite-linux.x64-19.6.0.0.0dbru.zip -d /usr/local/
 RUN unzip /tmp/instantclient-sdk-linux.x64-19.6.0.0.0dbru.zip -d /usr/local/
